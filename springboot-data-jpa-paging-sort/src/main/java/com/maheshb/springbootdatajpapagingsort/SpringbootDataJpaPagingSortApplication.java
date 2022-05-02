@@ -30,8 +30,7 @@ public class SpringbootDataJpaPagingSortApplication {
 		return (args) -> {
 			// save a few books
 			bookRepository.save(new BookEntity("Spring Microservices in Action", "John Carnell", 2525.00));
-			bookRepository
-					.save(new BookEntity("Spring Microservices in Action, Second Edition", "John Carnell", 4700.00));
+			bookRepository.save(new BookEntity("Spring Microservices in Action, Second Edition", "John Carnell", 4700.00));
 			bookRepository.save(new BookEntity("Learning Spring Boot 2.0", "Greg L. Turnquist", 2879.00));
 
 			// fetch all books
