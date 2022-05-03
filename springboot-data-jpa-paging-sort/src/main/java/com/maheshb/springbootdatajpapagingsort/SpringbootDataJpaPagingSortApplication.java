@@ -51,16 +51,19 @@ public class SpringbootDataJpaPagingSortApplication {
 			log.info("-------------------------------");
 			Iterable<BookEntity> allBooksSortedByName = bookRepository.findAll(Sort.by("name"));
 			allBooksSortedByName.forEach(bookEntity -> log.info(bookEntity.toString()));
+
 			// order by 'author' column - ascending
 			log.info("Books Sorted By author:");
 			log.info("-------------------------------");
 			Iterable<BookEntity> allBooksSortedByAuthor = bookRepository.findAll(Sort.by("author"));
 			allBooksSortedByAuthor.forEach(bookEntity -> log.info(bookEntity.toString()));
+
 			// order by 'author' column, descending
 			log.info("Books Sorted By authoor descending:");
 			log.info("-------------------------------");
 			Iterable<BookEntity> allBooksSortedByPrice = bookRepository.findAll(Sort.by("author").descending());
 			allBooksSortedByPrice.forEach(bookEntity -> log.info(bookEntity.toString()));
+
 			// order by 'name' column - descending, then order by 'price' - ascending
 			log.info("Books Sorted By name and price:");
 			log.info("-------------------------------");
